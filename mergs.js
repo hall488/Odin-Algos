@@ -1,16 +1,14 @@
-//prettier-ignore
 const merge = (one, two) => {
-    let array = [];
-    
-    for(;;) {
+  let array = [];
 
-        array.push(one[0] < two[0] ? one.shift() : two.shift());
+  for (;;) {
+    array.push(one[0] < two[0] ? one.shift() : two.shift());
 
-        if(!one.length || !two.length) break;
-    }
+    if (!one.length || !two.length) break;
+  }
 
-    return [...array, ...one, ...two];
-}
+  return [...array, ...one, ...two];
+};
 
 const mergeSort = (array) => {
   if (array.length == 1) return array;
